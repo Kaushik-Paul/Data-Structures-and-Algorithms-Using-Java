@@ -56,6 +56,10 @@ public class StackImplementation {
         System.out.println("NULL");
     }
 
+    public boolean isEmpty() {
+        return top == null;
+    }
+
     public static void main(String[] args) {
         StackImplementation stack = new StackImplementation();
         stack.push(10);
