@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/Arrays/Arrays.iml" filepath="$PROJECT_DIR$/Arrays/Arrays.iml" />
       <module fileurl="file://$PROJECT_DIR$/Data Structures and Algorithms.iml" filepath="$PROJECT_DIR$/Data Structures and Algorithms.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Dynamic Programming/Dynamic Programming.iml" filepath="$PROJECT_DIR$/Dynamic Programming/Dynamic Programming.iml" />
       <module fileurl="file://$PROJECT_DIR$/HashTables/HashTables.iml" filepath="$PROJECT_DIR$/HashTables/HashTables.iml" />
       <module fileurl="file://$PROJECT_DIR$/Linked Lists/Linked Lists.iml" filepath="$PROJECT_DIR$/Linked Lists/Linked Lists.iml" />
       <module fileurl="file://$PROJECT_DIR$/Recursions/Recursions.iml" filepath="$PROJECT_DIR$/Recursions/Recursions.iml" />
