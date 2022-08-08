@@ -3,6 +3,7 @@ package com.example;
 
 public class HouseRobber {
 
+    // 0(n) time and O(n) space
     public static int houseRobberWithArray(int[] loots) {
         int[] maxLoot = loots.clone();
         int maxProfit = Math.max(maxLoot[loots.length - 1], maxLoot[loots.length - 2]);
