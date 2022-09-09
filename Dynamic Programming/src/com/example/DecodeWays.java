@@ -10,7 +10,7 @@ public class DecodeWays {
         decodeWays[1] = string.charAt(0) == '0' ? 0 : 1;
 
         for (int i = 2; i <= string.length(); i++) {
-            if (string.charAt(i - 2) != '0') {
+            if (string.charAt(i - 1) != '0') {
                 decodeWays[i] += decodeWays[i - 1];
             }
             if (string.charAt(i - 2) == '1' || (string.charAt(i - 2) == '2' && string.charAt(i - 1) < '7')) {
