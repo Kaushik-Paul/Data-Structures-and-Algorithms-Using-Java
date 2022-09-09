@@ -16,6 +16,19 @@ public class HouseRobber {
         return maxLoot[0];
     }
 
+    public static int houseRobberWithoutArray(int[] array) {
+        int first = array[array.length - 1];
+        int second = Math.max(array[array.length - 2], first);
+
+        for (int i = array.length - 3; i >= 0; i--) {
+            array[i] = Math.max(array[i] + first, second);
+            first = array[i + 1];
+            second = array[i];
+        }
+        return array[0];
+    }
+
+
 
     public static void main(String[] args) {
         int[] loots = new int[]{1, 2, 3, 1};
