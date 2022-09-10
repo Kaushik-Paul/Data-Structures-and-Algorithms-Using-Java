@@ -17,9 +17,7 @@ public class LongestConsecutiveSequence {
                 while (set.contains(num + count)) {
                     count++;
                 }
-                if (longestSequence < count) {
-                    longestSequence = count;
-                }
+                longestSequence = Math.max(longestSequence, count);
             }
         }
 
