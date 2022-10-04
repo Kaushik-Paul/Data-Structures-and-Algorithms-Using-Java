@@ -32,7 +32,7 @@ public class FindLoop {
     }
 
     public void findLoop() {
-        Node node = findLoopNode();
+        Node node = findLoopNodeV2();
         if (node == null) {
             System.out.println("There is no loop in the linked list");
         } else {
@@ -40,6 +40,7 @@ public class FindLoop {
         }
     }
 
+    // O(n) time and O(1) space
     private Node findLoopNode() {
         if (head == null || head.next == null || head.next.next == null) {
             return null;
@@ -49,6 +50,34 @@ public class FindLoop {
         while (first != second) {
             first = first.next;
             second = second.next.next;
+        }
+        first = head;
+        while (first != second) {
+            first = first.next;
+            second = second.next;
+        }
+        return first;
+    }
+
+    // O(n) time and O(1) space
+    private Node findLoopNodeV2() {
+        if (head == null || head.next == null || head.next.next == null) {
+            return null;
+        }
+        Node first = head;
+        Node second = head;
+        while (first != null && second != null) {
+            first = first.next;
+            if (second.next == null) {
+                return null;
+            }
+            second = second.next.next;
+            if (first == second) {
+                break;
+            }
+        }
+        if (first == null || second == null) {
+            return null;
         }
         first = head;
         while (first != second) {
