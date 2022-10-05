@@ -29,6 +29,20 @@ public class QueueUsingStack {
         return stack2.pop();
     }
 
+    public int peek() {
+        if (stack2.isEmpty()) {
+            while (!stack1.isEmpty()) {
+                int tempValue = stack1.pop();
+                stack2.push(tempValue);
+            }
+        }
+        return stack2.peek();
+    }
+
+    public boolean isEmpty() {
+        return stack1.isEmpty() && stack2.isEmpty();
+    }
+
     public static void main(String[] args) {
         QueueUsingStack queueUsingStack = new QueueUsingStack();
         queueUsingStack.enqueue(10);
@@ -36,7 +50,9 @@ public class QueueUsingStack {
         queueUsingStack.enqueue(30);
         queueUsingStack.enqueue(40);
         queueUsingStack.enqueue(50);
+        System.out.println("The Peek Value is: " + queueUsingStack.peek());
         System.out.println("The Dequeued Value is: " + queueUsingStack.deQueue());
         System.out.println("The Dequeued Value is: " + queueUsingStack.deQueue());
+        System.out.println("The Peek Value is: " + queueUsingStack.peek());
     }
 }
