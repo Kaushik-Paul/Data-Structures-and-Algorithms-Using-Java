@@ -19,4 +19,25 @@ public class ReverseInteger {
 
         return isNegative ? -num : num;
     }
+
+    // O(n) time and O(1) space
+    public static int reverseTheNumberV2(int num) {
+        boolean isNegative = false;
+        if (num < 0) {
+            isNegative = true;
+            num = -1 * num;
+        }
+
+        long reversed = 0;
+        while (num > 0) {
+            reversed = (reversed * 10) + num % 10;
+            num = num / 10;
+        }
+        return isNegative ? (int) (-1 * reversed) : (int) reversed;
+    }
+
+    public static void main(String[] args) {
+        int num = -120;
+        System.out.println("The Reverse of the Number is: " + reverseTheNumberV2(num));
+    }
 }
