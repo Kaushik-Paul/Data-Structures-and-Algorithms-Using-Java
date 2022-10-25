@@ -21,7 +21,7 @@ public class BalancedBinaryTree {
 
     public void traversal() {
         inOrderTraversal(root);
-        System.out.println();
+        System.out.println("NULL");
     }
 
     private void inOrderTraversal(Node root) {
@@ -53,6 +53,31 @@ public class BalancedBinaryTree {
         return new Pair(balanced, 1 + Math.max(leftSubTree.height, rightSubTree.height));
     }
 
+    // Without Using Pair class
+    // Bottom Up Approach
+    // O(n) time and O(n) space
+    public void isBalancedBinaryTreeV2() {
+        if (isBalancedBinaryTreeV2Helper(this.root) == -1) {
+            System.out.println("It is not a Balanced Binary Tree");
+        } else {
+            System.out.println("It is a Balanced Binary Tree");
+        }
+    }
+
+    private int isBalancedBinaryTreeV2Helper(Node root) {
+        if (root == null) {
+            return 0;
+        }
+        int left = isBalancedBinaryTreeV2Helper(root.left);
+        int right = isBalancedBinaryTreeV2Helper(root.right);
+        boolean balanced = Math.abs(left - right) <= 1;
+        if (!balanced || left == -1 || right == -1) {
+            return -1;
+        }
+        // return Height of the tree
+        return 1 + Math.max(left, right);
+    }
+
     public static void main(String[] args) {
         BalancedBinaryTree tree = new BalancedBinaryTree();
         tree.root = new Node(1);
@@ -66,6 +91,6 @@ public class BalancedBinaryTree {
         tree.root.left.left.right = new Node(9);
         tree.root.left.right.left = new Node(10);
         tree.traversal();
-        tree.isBalancedBinaryTree();
+        tree.isBalancedBinaryTreeV2();
     }
 }
