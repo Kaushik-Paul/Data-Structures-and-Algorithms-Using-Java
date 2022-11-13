@@ -20,6 +20,7 @@
       <module fileurl="file://$PROJECT_DIR$/Sliding Window/Sliding Window.iml" filepath="$PROJECT_DIR$/Sliding Window/Sliding Window.iml" />
       <module fileurl="file://$PROJECT_DIR$/Sorting/Sorting.iml" filepath="$PROJECT_DIR$/Sorting/Sorting.iml" />
       <module fileurl="file://$PROJECT_DIR$/Stacks and Queues/Stacks and Queues.iml" filepath="$PROJECT_DIR$/Stacks and Queues/Stacks and Queues.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Streams/Streams.iml" filepath="$PROJECT_DIR$/Streams/Streams.iml" />
       <module fileurl="file://$PROJECT_DIR$/Strings/Strings.iml" filepath="$PROJECT_DIR$/Strings/Strings.iml" />
     </modules>
   </component>
