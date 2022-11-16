@@ -2,6 +2,7 @@ package com.example;
 
 public class FirstUniqueCharacter {
 
+    // O(n) time and O(1) space
     public static int firstUniqueCharacter(String string) {
         int[] frequency = new int[26];
         for (int i = 0; i < string.length(); i++) {
