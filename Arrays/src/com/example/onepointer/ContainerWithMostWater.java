@@ -2,19 +2,19 @@ package com.example.onepointer;
 
 public class ContainerWithMostWater {
 
+    // O(n) time and O(1) space
     public static int containerWithMostWater(int[] array) {
-        int left = 0;
-        int right = array.length - 1;
-
-        int maxArea = Integer.MIN_VALUE;
-        while (left < right) {
-            int minHeight = Math.min(array[left], array[right]);
-            int currentArea = minHeight * (right - left);
+        int startIdx = 0;
+        int endIdx = array.length - 1;
+        int maxArea = 0;
+        while (startIdx < endIdx) {
+            int minHeight = Math.min(array[startIdx], array[endIdx]);
+            int currentArea = minHeight * (endIdx - startIdx);
             maxArea = Math.max(maxArea, currentArea);
-            if (array[left] <= array[right]) {
-                left++;
+            if (array[startIdx] <= array[endIdx]) {
+                startIdx++;
             } else {
-                right--;
+                endIdx--;
             }
         }
         return maxArea;
