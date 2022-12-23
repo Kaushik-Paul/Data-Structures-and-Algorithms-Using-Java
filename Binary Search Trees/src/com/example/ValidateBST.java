@@ -50,7 +50,7 @@ public class ValidateBST {
         if (root == null) {
             return true;
         }
-        if (root.data <= min || root.data >= max) {
+        if (root.data < min || root.data >= max) {
             return false;
         }
         return validateBSTHelper(root.left, min, root.data) && validateBSTHelper(root.right, root.data, max);
