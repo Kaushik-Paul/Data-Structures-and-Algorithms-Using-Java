@@ -4,6 +4,7 @@ import java.util.Arrays;
 
 public class WordBreak {
 
+    // O(n) time and O(n) space
     public static boolean wordBreak(String string, String[] wordDict) {
         // One extra element for base case
         boolean[] checkWordBreak = new boolean[string.length() + 1];
@@ -12,7 +13,7 @@ public class WordBreak {
 
         for (int i = string.length() - 1; i >= 0; i--) {
             for (String word : wordDict) {
-                if (i + word.length() <= string.length() && string.startsWith(word, i)) {
+                if (word.length() + i <= string.length() && string.substring(i, i + word.length()).equals(word)) {
                     checkWordBreak[i] = checkWordBreak[i + word.length()];
                 }
                 if (checkWordBreak[i]) {
