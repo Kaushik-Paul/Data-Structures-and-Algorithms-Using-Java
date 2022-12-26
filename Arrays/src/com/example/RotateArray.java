@@ -16,6 +16,7 @@ public class RotateArray {
 
     // O(n) time and O(1) space
     public static void rotateArrayWithoutSpace(int[] array, int k) {
+        k = k % array.length;
         // Reverse the array
         int left = 0;
         int right = array.length - 1;
